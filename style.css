@@ -1,0 +1,81 @@
+/*очератние и фон самого фрагмента*/
+.calc   {
+    margin: auto; /*внешний отступ объекта(отцентровать-auto)*/
+    width: 300px;/*ширина фрагмента*/
+    height: 500px; /*высота фрагмента*/
+    border: 1px solid #000; /*добаваление границы*/
+    border-radius: 20px; /*закругление углов*/
+    background: #000;/*цвет фона фрагмента*/
+    color: #fff;/*цвет текста*/
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 19px; /*внутренний отступ текста*/
+    box-shadow: 4px 4px 4px #4f4f4f; /*тень фрагмента*/
+}
+
+/*добавлен стиль шапки фрагмента*/
+.calc-screen {
+    height: 125px;
+    padding: 10px;
+    display: grid;
+    justify-items: end; /*выравнивание всех элементов макета сетки по оси строки grid-контенера*/
+    align-items: end; /*выравнивает флекс-элементы внутри контейнера в перпендикулярном направлении*/
+    margin-bottom: 25px; /*устанавливает внешний отступ внизу элемента*/
+}
+
+.calc-screen p {
+    text-align: right; /*выравнение текста в кнопках справа*/
+    font-size: 4rem;
+    margin: 0;
+}
+
+/*расположение кнопок*/
+.buttons {
+    display: grid; /*это макет для сайта(табличное расположение)*/
+    grid-template-areas: /*пределяет шаблон сетки ссылаясь на имена областей, которые заданы с помощью свойства grid-area*/
+    "ас plus-minus percent division"
+    "seven eight nine multi"
+    "four five six minus"
+    "one two three plus"
+    "zero zero dot equal";
+    grid-gap: 7px;/*определяет расстояние (промежуток) между строками и столбцами в макете сетки*/
+    justify-items: center; /*выравнивание всех элементов макета сетки по оси строки grid-контенера*/
+}
+
+/*описание кнопки zero*/
+.btn.zero {
+    grid-area: zero; /* это сокращённая форма записи для свойств grid-row-start , grid-column-start (en-US), grid-row-end (en-US) и grid-column-end (en-US)*/
+    width: 100%;
+    border-radius: 34px;
+}
+
+/*стиль кнопок*/
+.btn {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 50%;
+    text-align: center; /*выравнение тескста в кнопках по центру*/
+    line-height: 60px; /*выравнение тескста в кнопках по высоте*/
+    font-size: 1.5em;/*размер шрифта*/
+    cursor: pointer; /*наведение курсора*/
+    user-select: none;/*определяет может ли пользователь выбрать текст*/
+}
+
+
+.btn:hover /*срабатывает, когда пользователь наводит на элемент мышью, но не обязательно активирует его*/ {
+    filter: brightness(120%); /*добавление яркости при наведении*/
+}
+
+.btn:active /*определяет стиль активного элемента*/ {
+    filter: brightness(90%); /*добавление яркости при наведении*/
+}
+
+/*добавление цвета кнопкам*/
+.btn.bg-grey {
+    background:#a6a6a6;
+}
+
+/*добавление цвета кнопкам*/
+.btn.bg-orange {
+    background:#ff9601;
+}
